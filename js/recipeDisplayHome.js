@@ -21,7 +21,7 @@ function onLoad() {
     loadStorage();
 
     main.addEventListener('click', function(e) {
-        if(e.target.isEqualNode(document.querySelector("div a > img"))) {
+        if(e.target.isEqualNode(document.querySelector(".image-conatainer > img"))) {
             console.log(e.target);
             const para = e.target.parentElement.nextElementSibling;
             let recipeTitle = para.textContent;
