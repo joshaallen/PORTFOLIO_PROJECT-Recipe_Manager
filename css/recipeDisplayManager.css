@@ -1,0 +1,229 @@
+/*
+Resets
+*/
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 62.5%;
+    height: 100%;
+    width: 100%;
+  }
+  body {
+    min-height: 100%;
+    width: 100%;
+    
+  }
+  a {
+    text-decoration: none;
+  }
+  ul, ol {
+    list-style-type: none;
+  }
+  /*
+Layouts
+*/
+body, nav {
+  background: linear-gradient(to bottom right,#FF0000, #FFA500);
+  background-color: #FF0000;
+}
+.container {
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+.header {
+  border-bottom: 5px solid #000000;
+  flex: 1 0 9rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+a.icon-container[href="#"] {
+  position: absolute;
+  top: 0.75rem; 
+  right: 1.5rem;
+}
+.nav {
+    width: 100%;
+    display: none;
+}
+.nav-list-container {
+  width: 100%;
+}
+.nav-list-container li {
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+.nav-list-container li:hover {
+  background: #FFFF66;
+}
+.nav-list-container li a {
+  display: block;
+  padding: 1rem;
+  cursor: pointer;
+  color: #000000;
+}
+.display {
+  display: block;
+}
+.main_container {
+  max-width: 76.8rem;
+  flex: 1 1 auto;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  border-radius: 1.2rem;
+  background: linear-gradient(to bottom right,#FFFF66, #FFFFFF);
+  background-color: #FFFF66;
+  box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.25);
+}
+
+.heading {
+  flex: 1 1 100%;
+  text-align: center;
+  background: -webkit-linear-gradient(bottom right,#FF0000, #FFA500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #FF0000;
+}
+h2 {
+  color:  #003366;
+  font-weight: bolder;
+  text-transform: uppercase;
+  text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+}
+#increase, #decrease {
+  width: 2rem;
+  border: none;
+  padding: 1.6rem 3.2rem;
+  text-decoration: none;
+  margin: 0.4rem 0.2rem;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 1.2rem;
+}
+#increase {
+  background-color: #0000FF;
+}
+#decrease {
+  background-color: #FF0000;
+}
+.title-section {
+  background-color:white;
+background-image: linear-gradient(90deg, rgba(200,0,0,.5) 50%, transparent 50%),
+linear-gradient(rgba(200,0,0,.5) 50%, transparent 50%);
+background-size:50px 50px;
+}
+.servings-amount, li > span {
+  font-size: 3rem;
+  color:  #003366;
+  font-weight: bolder;
+  text-transform: uppercase;
+  text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+
+}
+.title-section p {
+  font-weight: bolder;
+}
+.ingredient-section, .instruction-section {
+  position: relative;
+  min-width: 28.4rem;
+}
+
+.image-container img {
+  min-width: 100%;
+}
+
+span.toggle-ingredients, span.toggle-instructions {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  cursor: pointer;
+}
+.li-position {
+  list-style-position: inside;
+}
+.indent {
+  padding-left: 1rem;
+}
+.bullet {
+  list-style-type: disc;
+}
+.numeral {
+  list-style-type: decimal;
+}
+.display-inline-block {
+  display: inline-block;
+}
+.display-none {
+  display: none;
+}
+.show-hide {
+  height: 20px;
+  width: 20px;
+  border: 1px solid black;
+  border-radius: 50%;
+  text-align: center;
+}
+.footer {
+  text-align: center;
+  border-top: 5px solid #000000;
+  flex: 0 0 auto;
+  width: 100%;
+}
+/*
+Typography
+*/
+body {
+    font: 1.8rem/1.8 Avantgarde,"TeX Gyre Adventor","URW Gothic L",sans-serif;
+  }
+.show-hide {
+  font: bold 2rem/1 Avantgarde,"TeX Gyre Adventor","URW Gothic L",sans-serif;
+  color: black;
+}
+/*
+Media Queries
+*/
+@media screen and (min-width: 426px) {
+  .image-container {
+    max-width: fit-content;
+   
+  }
+  .ingredient-section, .instruction-section {
+    max-width: 62rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header {
+    display: flex;
+    flex: 0 0 auto;
+  }
+  .header-title {
+    flex: 2 1 100%;
+  }
+  a.icon-container[href="#"] {
+    display: none;
+  }
+  .nav {
+    display: flex;
+  }
+  .nav-list-container {
+    display: flex;
+  }
+  .image-container {
+    max-width: none;
+    width: 100%;
+  }
+  .title-section, .image-container, .heading, .ingredient-section, .instruction-section {
+    text-align: center;
+  }
+  .main_container {
+    min-width: 47.8rem;
+  }
+
+}

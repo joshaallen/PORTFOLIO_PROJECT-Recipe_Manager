@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This webpage is part of a web application that allows a user to create a recipe and save it onto their browser's local storage in the form of a JS Object">
+    <meta name="keywords" content="local storage, javascript, recipe manager, portfolio project">
+    <meta name="author" content="Joshua Allen">
+    <link rel="stylesheet" href="css/recipeInputManager.css">
+    <script src="js/recipeInputManager.js"></script>
+    <title>Recipe Input Manager</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h2 class="header-title">Recipe Manager</h2>
+            <a class="icon-container" href="#"><img src="img/hamburger_icon-72w.png" alt="Hamburger Icon"></a>
+            <nav class="nav">
+                <ul class="nav-list-container">
+                    <li>
+                        <a href="./recipeDisplayHome.html">Home</a>
+                    </li>
+                    <li><a href="./recipeInputManager.html">Create Recipe</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main-container">
+            <h1 class="heading">Make a Recipe</h1>
+            <form action="">
+                <div class="text-flex">
+                    <label for="title">Recipe Title</label>
+                    <input type="text" name="title" id="title" required>
+                </div>
+                <div class="text-flex">
+                    <label for="title">Recipe Author</label>
+                    <input type="text" name="author" id="author" required>
+                </div>
+                <div class="text-select-flex margin-left">
+                    <label for="cooking_time">Recipe Cooking Time</label>
+                    <input type="text" name="cooking_time" id="cooking_time" required>
+                    <label for="cooking_time_units">Time Units</label>
+                    <select name="cook_time_units" id="cooking_time_units">
+                        <option value="">Select</option>
+                        <option value="minutes">minutes</option>
+                        <option value="hours">hours</option>
+                    </select>
+                </div>
+    
+                <div class="text-select-flex margin-left">
+                    <label for="prep_time">Recipe Prep Time</label>
+                    <input type="text" name="prep_time" id="prep_time" required>
+                    <label for="prep_time_units">Time Units</label>
+                    <select name="prep_time_units" id="prep_time_units">
+                        <option value="">Select</option>
+                        <option value="minutes">minutes</option>
+                        <option value="hours">hours</option>
+                    </select>
+                </div>
+               
+                <div class="text-flex">
+                    <label for="serving">Recipe Servings Total</label>
+                    <input type="text" name="serving" id="serving" required>
+                </div>
+    
+                <div class="text-flex"> 
+                    <label for="recipe_difficulty">Recipe Difficulty</label>
+                    <select name="recipe_difficulty" id="recipe_difficulty">
+                        <option value="">Select</option>
+                        <option value="amateur">Amateur</option>
+                        <option value="homeCook">Home Cook</option>
+                        <option value="expert">Expert</option>
+                    </select>
+                </div>
+                <div class="single_button_container">
+                    <input type="button" id="addIngredient"value="Add Ingredients">
+                </div>
+                <div id="ingredient_container">
+                    <div>
+                        <label for="ingredient">Recipe Ingriedients</label>
+                    <input type="text" name="ingredient" id="ingredient" required>
+                    <label for="ingredient_quantity">Qty</label>
+                    <select name="ingredient_quantity" id="ingredient_quantity">
+                        <option value="">Select</option>
+                        <option value="1/4">1/4</option>
+                        <option value="1/3">1/3</option>
+                        <option value="1/2">1/2</option>
+                        <option value="2/3">2/3</option>
+                        <option value="3/4">3/4</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                    </select>
+                    <label for="ingredient_unit">Unit</label>
+                    <select name="ingredient_unit" id="ingredient_unit">
+                        <option value="">Select</option>
+                        <option value="lb">lb</option>
+                        <option value="oz">oz</option>
+                        <option value="tbsp">tbsp</option>
+                        <option value="tsp">tsp</option>
+                        <option value="cup">cup</option>
+                        <option value="gal">Gal</option>
+                    </select>
+                    </div>
+                    
+                </div>
+                <!-- Beginning of Ingredient Template-->
+                <template>
+                        <div>
+                            <label for="ingredient">Recipe Ingriedients</label>
+                            <input type="text" name="ingredient" id="ingredient" required>
+                            <label for="ingredient_quantity">Qty</label>
+                            <select name="ingredient_quantity" id="ingredient_quantity">
+                                <option value="">Select</option>
+                                <option value="1/4">1/4</option>
+                                <option value="1/3">1/3</option>
+                                <option value="1/2">1/2</option>
+                                <option value="2/3">2/3</option>
+                                <option value="3/4">3/4</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                            </select>
+                            <label for="ingredient_unit">Unit</label>
+                            <select name="ingredient_unit" id="ingredient_unit">
+                                <option value="">Select</option>
+                                <option value="lb">lb</option>
+                                <option value="oz">oz</option>
+                                <option value="tbsp">tbsp</option>
+                                <option value="tsp">tsp</option>
+                                <option value="cup">cup</option>
+                                <option value="gal">Gal</option>
+                            </select>
+                        </div>
+                </template>
+                <!--end of Recipe Ingredient Template-->
+                <div class="single_button_container">
+                    <input type="button" value="Add Instructions" id="addInstruction">
+                </div>
+                <div id="instruction_container">
+                    <div>
+                        <label for="instruction">Recipe Instructions</label>
+                    <input type="text" name="instruction" id="instruction" required>
+                    </div>
+                </div>
+                <template><!--beginning of instruction template-->
+                    <div>
+                        <label for="instruction">Recipe Instructions</label>
+                        <input type="text" name="instruction" id="instruction" required>
+                    </div>
+                </template><!--end of instruction template-->
+                <div class="half-width">
+                    <input id="save" type="button" value="Save">
+                </div>
+                <div class="half-width">
+                    <input type="reset" value="Reset">
+                </div>
+            </form>
+        </main><!--end of main container-->
+        <footer class="footer">
+            <h3>Portfolio Project Recipe Manager</h3> <p>&#169; Copyright <span id="year"></span> WDV321</p>
+        </footer>
+        <script src="js/copyrightYear.js"></script>
+        <script src="js/toggle-menu.js"></script>
+    </div><!--end of container-->
+</body>
+
+</html>

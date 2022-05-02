@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This webpage is part of a web application that allows a user view a recipe rendered from local storage in the form of a JS Object">
+    <meta name="keywords" content="local storage, javascript, recipe manager, portfolio project">
+    <meta name="author" content="Joshua Allen">
+    <link rel="stylesheet" href="css/recipeDisplayManager.css">
+    <script src="js/recipeDisplayManager.js"></script>
+    <title>Recipe Display Manager</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h2 class="header-title">Recipe Manager</h2>
+            <a class="icon-container" href="#"><img src="img/hamburger_icon-72w.png" alt="Hamburger Icon"></a>
+            <nav class="nav">
+                <ul class="nav-list-container">
+                    <li>
+                        <a href="./recipeDisplayHome.html">Home</a>
+                    </li>
+                    <li><a href="./recipeInputManager.html">Create Recipe</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main_container">
+            <h1 class="heading">Selected Recipe</h1>
+            <section class="title-section">
+                <h2 class="recipe-heading">Recipe Title</h1>
+                <div class="image-container"><img src="img/default_food_plate-240w.png" alt="default food img" height="240" width="240"></div>
+                <p class="servings">Servings:<button id="increase">+</button><span class="servings-amount"></span><button id="decrease">-</button></p>
+                <p class="cookingTime">Cooking Time:</p>
+                <p class="prepTime">Prep Time:</p>
+            </section>
+            <section class="ingredient-section">
+                <h2 class="sub-heading">Ingredients</h2>
+                <span class="toggle-ingredients"><span id="ingredient-show" class="display-none show-hide">+</span><span id="ingredient-hide" class="show-hide display-inline-block">-</span></span>
+                <ul class="ingredients">
+                    
+                </ul>
+            </section>
+            <section class="instruction-section">
+                <h2>Instructions</h2>
+                <span class="toggle-instructions"><span id="instruction-show" class="display-none show-hide">+</span><span id="instruction-hide" class="show-hide display-inline-block">-</span></span>
+                <ol class="instructions">
+    
+                </ol>
+            </section>
+        </main>
+        <footer class="footer">
+            <h3>Portfolio Project Recipe Manager</h3> <p>&#169; Copyright <span id="year"></span> WDV321</p>
+        </footer>
+        <script src="js/copyrightYear.js"></script>
+        <script src="js/toggle-menu.js"></script>
+    </div><!--end of container-->
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This webpage is part of a web application that is the homepage for a user to view already created recipes and select them to view individual recipes">
+    <meta name="keywords" content="local storage, javascript, recipe manager, portfolio project">
+    <meta name="author" content="Joshua Allen">
+    <link rel="stylesheet" href="css/recipeDisplayHome.css">
+    <script src="js/recipeDisplayHome.js"></script>
+    <title>Recipe Home Page</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h2 class="header-title">Recipe Manager</h2>
+            <a class="icon-container" href="#"><img src="img/hamburger_icon-72w.png" alt="Hamburger Icon"></a>
+            <nav class="nav">
+                <ul class="nav-list-container">
+                    <li>
+                        <a href="./recipeDisplayHome.html">Home</a> 
+                    </li>
+                    <li><a href="./recipeInputManager.html">Create Recipe</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main class="main-container">
+            <h1 class="heading">Your Recipe Awaits...</h1>
+             <!-- Beginning of Recipe Template-->
+            <template>
+                <div class="recipe-container">
+                    <a class="image-conatainer" href="./recipeDisplayManager.html"><img src="img/default_food_plate-240w.png" alt="default image of food" height="175" width="131"></a>   
+                <p class="recipe-title center">Recipe Title</p>
+                <p class="recipe-author center">By: <span><small class="small">Author</small></span></p>
+                </div>
+            </template>
+             <!-- Ending of Recipe Template-->
+        </main>
+        <footer class="footer">
+            <h3>Portfolio Project Recipe Manager</h3> <p>&#169; Copyright <span id="year"></span> WDV321</p>
+        </footer>
+        <script src="js/copyrightYear.js"></script>
+        <script src="js/toggle-menu.js"></script>
+    </div><!--end of container-->
+</body>
+</html>
