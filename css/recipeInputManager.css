@@ -174,7 +174,7 @@ Media Queries
     flex: 0 0 auto;
   }
   .header-title {
-    flex: 2 1 100%;
+    flex: 2 1 50%;
   }
   a.icon-container[href="#"] {
     display: none;
